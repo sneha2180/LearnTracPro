@@ -1,8 +1,12 @@
 import React from 'react'
+import NavbarComponent from './NavbarComponent'
 
 function GptComponent() {
   return (
-    <div>GptComponent</div>
+    <div>
+      <NavbarComponent/>
+      GptComponent
+    </div>
   )
 }
 

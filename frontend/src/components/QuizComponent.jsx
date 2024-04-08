@@ -1,8 +1,11 @@
 import React from 'react'
-
+import NavbarComponent from './NavbarComponent'
 function QuizComponent() {
   return (
-    <div>QuizComponent</div>
+    <div>
+      <NavbarComponent/>
+      QuizComponent
+    </div>
   )
 }
 

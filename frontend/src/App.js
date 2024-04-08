@@ -1,22 +1,22 @@
 import React from "react";
-import HomeComponent from "./components/HomeComponent";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import HomeComponent from "./components/HomeComponent";
 import AboutComponent from "./components/AboutComponent";
 import CoursesComponent from "./components/CoursesComponent";
 import DiscussionComponent from "./components/DiscussionComponent";
 import GptComponent from "./components/GptComponent";
 import QuizComponent from "./components/QuizComponent";
 import SignInComponent from "./components/SignInComponent";
-import SignUpComponent from "./components/SignUpComponent";
 import StudyGroupComponent from "./components/StudyGroupComponent";
-
+import SignUpComponent from "./components/SignUpComponent";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <div>
+        <Router>
         <Routes>
           <Route path="/" exact element={<HomeComponent />} />
+          <Route path="/home" exact element={<HomeComponent />} />
           <Route path="/about" exact element={<AboutComponent />} />
           <Route path="/courses" exact element={<CoursesComponent />} />
           <Route path="/quiz" exact element={<QuizComponent />} />
