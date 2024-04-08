@@ -1,8 +1,3 @@
-// import {password_hash} from './common/passwordhash';
-// var mysql = require('mysql2');
-// const express = require('express');
-// const bodyParser = require('body-parser');
-// const bcrypt = require('bcrypt');
 import mysql from "mysql2";
 import express from "express";
 import bodyParser from "body-parser";
