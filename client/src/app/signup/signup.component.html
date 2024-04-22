@@ -1,0 +1,14 @@
+<div>
+    <h1>Sign Up</h1>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Name" formControlName="name"/>
+        <input type="text" placeholder="Email" formControlName="email"/>
+        <input type="text" placeholder="Password" formControlName="password"/>
+        <select formControlName="role">
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="tutor">Tutor</option>
+        </select>
+        <input type="submit" value="SIGN UP" [disabled]="!userForm.valid"/>
+    </form>
+</div>

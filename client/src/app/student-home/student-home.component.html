@@ -1,0 +1,25 @@
+<div>
+    <div>
+        LEARNTRACPRO
+    </div>
+    <div>
+        <div>BLOGS</div>
+        @if(blogs){
+            @for( blog of blogs;track blog._id){
+                <a href="/student/blog/{{blog._id}}">
+                    <div>{{blog.title}}</div>
+                </a>
+            }
+        }
+    </div>
+    <div>
+        <div>COURSES</div>
+        @if(courses){
+            @for(course of courses;track course._id){
+                <a href="/student/course/{{course._id}}">
+                    <div>{{course.title}}</div>
+                </a>
+            }
+        }
+    </div>
+</div>

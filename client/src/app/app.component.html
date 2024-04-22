@@ -1,0 +1,48 @@
+<!-- @if(user){
+  @if(user.role=='student'){
+    @if(path=='/student'){
+      <app-student-home></app-student-home>
+    }
+    @if(path=='/student/home'){
+      <app-student-home></app-student-home>
+    }
+    @if(path=='/student/about'){
+      <app-student-about></app-student-about>
+    }
+    @if(path=='/student/blogs'){
+      <app-student-blogs></app-student-blogs>
+    }
+    @if(path=='/student/courses'){
+      <app-student-courses></app-student-courses>
+    }
+    @if(path=='/student/discussions'){
+      <app-student-discussions></app-student-discussions>
+    }
+    @if(path=='/student/account'){
+      <app-student-account></app-student-account>
+    }
+    @if(path=='/student/course/:id'){
+      <app-show-course></app-show-course>
+    }
+  }
+  @if(user.role=='tutor'){
+    <app-tutor-home></app-tutor-home>
+  }
+}@else{
+  @if(path=='/signin'){
+    <app-signin></app-signin>
+  }
+  @if(path=='/signup'){
+    <app-signup></app-signup>
+  }
+} -->
+
+@if(this.user==null){
+  @if(this.path=='/register'){
+      <app-signup></app-signup>
+  }@else{
+      <app-signin></app-signin>
+  }
+}@else{
+  <app-navbar-student></app-navbar-student>
+}

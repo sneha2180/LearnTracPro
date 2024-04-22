@@ -1,0 +1,9 @@
+<div>
+    <div>
+        @if(courses){
+            @for(course of courses;track course._id){
+                <div (click)="handleClick(course._id)">{{course.title}}</div>
+            }
+        }
+    </div>
+</div>

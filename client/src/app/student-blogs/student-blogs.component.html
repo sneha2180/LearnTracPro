@@ -1,0 +1,9 @@
+<div>
+    <div>
+        @if(blogs){
+            @for(blog of blogs;track blog._id){
+                <div (click)="handleBlogClick(blog._id)">{{blog.title}}</div>
+            }
+        }
+    </div>
+</div>

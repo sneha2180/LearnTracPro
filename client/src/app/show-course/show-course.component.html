@@ -1,0 +1,18 @@
+<div>
+    @if(newCourse){
+        <div>{{newCourse.title}}</div>
+        <div>{{newCourse.description}}</div>
+        <div>{{newCourse.category}}</div>
+        <div>{{newCourse.instructor}}</div>
+        <div>{{newCourse.duration}}</div>
+        <div>{{newCourse.level}}</div>
+        @for(prerequisite of newCourse.prerequisites;track prerequisite){
+            <div>{{prerequisite}}</div>
+        }
+        <!-- <div>
+            @if(chapters){
+                
+            }
+        </div> -->
+    }
+</div>

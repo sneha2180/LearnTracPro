@@ -1,0 +1,12 @@
+<div>
+    @if(newBlog){
+        <div>{{newBlog.title}}</div>
+        <div>{{newBlog.content}}</div>
+        <div>{{newBlog.createdAt}}</div>
+        <div>
+            @if(author){
+                <div>{{author.name}}</div>
+            }
+        </div>
+    }
+</div>

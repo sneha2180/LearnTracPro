@@ -1,0 +1,9 @@
+<div>
+    <div>
+        @if(discussions){
+            @for(discussion of discussions;track discussion._id){
+                <div (click)="handleDiscussionClick(discussion._id)">{{discussion.title}}</div>
+            }
+        }
+    </div>
+</div>
