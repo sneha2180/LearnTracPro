@@ -1,0 +1,100 @@
+<div class="create-course">
+  <h1 class="create-course-title">Create Course</h1>
+  <form [formGroup]="courseForm" (ngSubmit)="onSubmit()" class="course-form">
+    <input
+      type="text"
+      placeholder="Title"
+      formControlName="title"
+      class="course-input"
+    />
+    <input
+      type="text"
+      placeholder="Description"
+      formControlName="description"
+      class="course-input"
+    />
+    <input
+      type="text"
+      placeholder="Author Name"
+      formControlName="instructor"
+      class="course-input"
+    />
+    <input
+      type="text"
+      placeholder="Duration"
+      formControlName="duration"
+      class="course-input"
+    />
+    <input
+      type="text"
+      placeholder="Author Name"
+      formControlName="imageUrl"
+      class="course-input"
+    />
+    <div class="course-form-select">
+      <select formControlName="category" class="course-input">
+        <option value="" disabled>Select Category</option>
+        <option value="mathematics">Mathematics</option>
+        <option value="science">Science</option>
+        <option value="language">Language Arts</option>
+        <option value="history">History</option>
+        <option value="computer-science">Computer Science</option>
+        <option value="art">Art</option>
+      </select>
+      <select formControlName="level" class="course-input">
+        <option value="" disabled>Select Level</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+    </div>
+    <input
+      type="submit"
+      value="CREATE COURSE"
+      [disabled]="!courseForm.valid"
+      class="course-button"
+    />
+  </form>
+  @if(chapterCreateButton){
+  <button (click)="handleChapterCreate()" class="chapter-create-button">
+    Create Chapter
+  </button>
+  } @if(chapters){ @for( chapter of chapters;track chapter.title){
+  <div class="blog-list-item">
+    <div class="blog-title">{{ chapter.title }}</div>
+    <div>{{chapter.content}}</div>
+  </div>
+
+  } } @if(showChapterForm){
+  <form
+    [formGroup]="chapterForm"
+    (ngSubmit)="onChapterSubmit()"
+    class="chapter-form"
+  >
+    <input
+      type="text"
+      placeholder="Title"
+      formControlName="title"
+      class="chapter-input"
+    />
+    <input
+      type="text"
+      placeholder="Description"
+      formControlName="content"
+      class="chapter-input"
+    />
+    <input
+      type="text"
+      placeholder="Video URL"
+      formControlName="video"
+      class="chapter-input"
+    />
+    <input
+      type="submit"
+      value="CREATE CHAPTER"
+      [disabled]="!chapterForm.valid"
+      class="chapter-button"
+    />
+  </form>
+  }
+</div>

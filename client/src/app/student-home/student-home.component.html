@@ -1,25 +1,14 @@
-<div>
-    <div>
+<div class="landing-page">
+    <!-- <div class="heading">
         LEARNTRACPRO
+    </div> -->
+    <img src="assets/home-image.jpg" class="home-image">
+    <div class="section">
+        <div class="blog-heading">BLOGS</div>
+        <app-blog-list></app-blog-list>
     </div>
-    <div>
-        <div>BLOGS</div>
-        @if(blogs){
-            @for( blog of blogs;track blog._id){
-                <a href="/student/blog/{{blog._id}}">
-                    <div>{{blog.title}}</div>
-                </a>
-            }
-        }
-    </div>
-    <div>
-        <div>COURSES</div>
-        @if(courses){
-            @for(course of courses;track course._id){
-                <a href="/student/course/{{course._id}}">
-                    <div>{{course.title}}</div>
-                </a>
-            }
-        }
+    <div class="section">
+        <div class="blog-heading">COURSES</div>
+        <app-course-list></app-course-list>
     </div>
 </div>

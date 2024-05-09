@@ -1,0 +1,54 @@
+
+.discussion-details {
+    background-color: #A87676; /* Background color */ /* Font color */
+    padding: 20px; /* Add padding for spacing */
+    font-family: Arial, sans-serif;
+    height:100vh; /* Specify font family */
+}
+
+.discussion-title {
+    color:white;
+    font-size: 24px; /* Increase font size for title */
+    font-weight: bold; /* Make title bold */
+    margin-bottom: 10px;
+    color:white; /* Add margin below title for spacing */
+}
+
+.discussion-content {
+    color:white;
+    margin-bottom: 10px; /* Add margin below content for spacing */
+}
+
+.comments {
+    margin-top: 20px; /* Add margin above comments section for spacing */
+}
+
+.comment {
+    margin-bottom: 5px;
+    color: white; /* Add margin between comments for spacing */
+}
+
+.comment-date {
+    font-style: italic;
+    color:white; /* Make comment date italic */
+}
+
+.comment-form {
+    margin-top: 20px; /* Add margin above comment form for spacing */
+}
+
+.comment-input {
+    width: calc(100% - 110px); /* Set input width */
+    padding: 5px; /* Add padding to input */
+    margin-bottom: 10px; /* Add margin below input for spacing */
+    border: 1px solid #777; /* Add border to input */
+    border-radius: 5px; /* Apply border radius to input */
+}
+
+.comment-button {
+    width: 100px; /* Set button width */
+    padding: 5px; /* Add padding to button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Apply border radius to button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}

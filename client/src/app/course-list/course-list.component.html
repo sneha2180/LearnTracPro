@@ -1,0 +1,12 @@
+<div class="blog-container">
+    @if(courses){
+        @for(course of courses;track course._id){
+            <div class="blog-list-item">
+                <a href="/student/course/{{course._id}}" class="blog-link">
+                    <div class="blog-title">{{course.title}}</div>
+                </a>
+                <img [src]="course.safeImageUrl">
+            </div>
+        }
+    }
+</div>

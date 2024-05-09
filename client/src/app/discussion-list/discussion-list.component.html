@@ -1,0 +1,10 @@
+<div class="blog-container">
+    @if(discussions){
+        @for(discussion of discussions;track discussion._id){
+            <a href="/student/discussion/{{discussion._id}}" class="blog-link">
+                <div class="blog-title">{{discussion.title}}</div>
+            </a>
+        }
+    }
+    <button (click)="handleDiscussionCreate()" class="write-blog-button">Discuss something</button>
+</div>

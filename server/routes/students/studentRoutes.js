@@ -54,4 +54,22 @@ router.post('/signin', async (req, res) => {
         res.status(500).json(null);
     }
 });
+
+router.post('/enroll', async (req, res) => {
+    try {
+        const { studentId, courseId } = req.body;
+        const student = await Student.findById(studentId);
+        console.log(student);
+        if (!student) {
+            return res.status(404).json({ message: 'Student not found' });
+        }
+        student.enrolledCourses.push(courseId);
+        await student.save();
+
+        res.status(200).json(student);
+    } catch (error) {
+        console.error('Error enrolling student:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
 module.exports = router;

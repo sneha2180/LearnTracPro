@@ -1,0 +1,8 @@
+<div class="create-discussion">
+    <h1>Create Discussion</h1>
+    <form [formGroup]="discussionForm" (ngSubmit)="onSubmit()" class="discussion-form">
+        <input type="text" placeholder="Title" formControlName="title" class="discussion-input"/>
+        <input type="text" placeholder="Content" formControlName="content" class="discussion-input"/>
+        <input type="submit" value="CREATE DISCUSSION" [disabled]="!discussionForm.valid" class="discussion-button"/>
+    </form>
+</div>

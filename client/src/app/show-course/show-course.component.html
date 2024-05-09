@@ -1,18 +1,70 @@
-<div>
+<div class="course-details">
     @if(newCourse){
-        <div>{{newCourse.title}}</div>
-        <div>{{newCourse.description}}</div>
-        <div>{{newCourse.category}}</div>
-        <div>{{newCourse.instructor}}</div>
-        <div>{{newCourse.duration}}</div>
-        <div>{{newCourse.level}}</div>
-        @for(prerequisite of newCourse.prerequisites;track prerequisite){
-            <div>{{prerequisite}}</div>
-        }
-        <!-- <div>
-            @if(chapters){
-                
-            }
-        </div> -->
+    <div class="course-title">{{ newCourse.title }}</div>
+    <div class="course-info">
+      <div class="course-info-text">
+        <div class="course-description">
+          <b>Description:</b>{{ newCourse.description }}
+        </div>
+        <br />
+        <div><b>Category:</b> {{ newCourse.category }}</div>
+        <br />
+        <div><b>Instructor:</b> {{ newCourse.instructor }}</div>
+        <br />
+        <div><b>Duration:</b> {{ newCourse.duration }} weeks</div>
+        <br />
+        <div><b>Level:</b> {{ newCourse.level }}</div>
+      </div>
+  
+      <img [src]="newCourse.safeImageUrl" />
+    </div>
+    <div class="prerequisites">
+      @for(prerequisite of newCourse.prerequisites;track prerequisite){
+      <div>{{ prerequisite }}</div>
+      }
+    </div>
+    @if(!enrolledCourses.includes(newCourse._id)){
+      <button (click)="onEnroll()">Enroll</button>
     }
-</div>
+    @if(enrolledCourses.includes(newCourse._id)){
+      <div class="chapter">
+        @if(chapters){
+        <div class="chapter">
+          <h1>{{ chapter.title }}</h1>
+          <p>{{ chapter.content }}</p>
+          <div class="chapter-video">
+            <iframe
+              width="560"
+              height="315"
+              [src]="chapter.safeVideoUrl"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+        <!-- @if(chapterno != 0){
+        <button (click)="handlePreviousChapter()" class="chapter-button">
+          Previous
+        </button>
+        } @if(noofchapters - 1 > chapterno){
+        <button (click)="handleNextChapter()" class="chapter-button">Next</button>
+        } -->
+        <div class="div-2-class">
+          @if(chapterno != 0){
+          <button (click)="handlePreviousChapter()" class="chapter-button">
+            ⇚ Previous
+          </button>
+          } @if(noofchapters - 1 > chapterno){
+          <button (click)="handleNextChapter()" class="chapter-button">
+            Next ⇛
+          </button>
+          }
+        </div>
+        }
+      </div>
+    }
+    }
+  </div>

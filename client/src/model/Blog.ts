@@ -26,4 +26,21 @@ export default class Blog {
       return {};
     }
   }
+  createBlog = async (obj: any): Promise<boolean> => {
+    try {
+      const apiConnect = await ApiConnect.getInstance();
+      obj = {...obj,"createdAt":Date.now(),"updatedAt":Date.now()};
+      console.log(obj);
+      const response = await apiConnect.post('/blog/', {}, obj);
+      const data = await response.json();
+      if (response.ok) {
+        const blog = Object.assign(new Blog(), data);
+        console.log(blog);
+        return true;
+      } else throw new Error('Incorrect Login Credentials');
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  };
 }

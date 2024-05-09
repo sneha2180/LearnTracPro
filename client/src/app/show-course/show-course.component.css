@@ -1,0 +1,51 @@
+*{
+    overflow-x: hidden;
+  }
+  .course-title{
+      font-size: 30px;
+      text-align: center;
+      font-weight: 600;
+  }
+  .chapter-video{
+      width: 90vw;
+      display: flex;
+      justify-content: center;
+  }
+  .div-2-class {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px;
+      font-family: "Raleway", sans-serif;
+      margin: 20px;
+    }
+    .div-2-class button {
+      border: none;
+      outline: none;
+      background: none;
+      font-weight: 600;
+      cursor: pointer;
+      color: #0075bd;
+    }
+    .next-button {
+      margin-left: auto;
+    }
+    .course-info{
+      display: flex;
+      justify-content: space-around;
+      margin: 10px;
+    }
+    .chapter{
+      width:90vw;
+      padding:50px;
+    }
+    .course-info-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    img{
+      width:20vw;
+    }
+    .course-info{
+      display: flex;
+    }

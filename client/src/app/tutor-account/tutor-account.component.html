@@ -1,0 +1,19 @@
+<div class="user-account">
+    <div>
+        @if(user){
+            <div class="user-info">
+                <div class="info-label">Name:</div>
+                <div class="info-value">{{name}}</div>
+            </div>
+            <div class="user-info">
+                <div class="info-label">Email:</div>
+                <div class="info-value">{{email}}</div>
+            </div>
+            <div class="user-info">
+                <div class="info-label">Role:</div>
+                <div class="info-value">{{role}}</div>
+            </div>
+        }
+        <button (click)="handleLogout()">Logout</button>
+    </div>
+</div>

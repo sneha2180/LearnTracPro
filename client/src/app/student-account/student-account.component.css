@@ -1,0 +1,21 @@
+.user-account {
+    padding: 20px; 
+    font-family: Arial, sans-serif; 
+    height: 100vh;
+}
+.user-info {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.info-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    margin-left: 10px;
+}
+.user-div{
+    
+}

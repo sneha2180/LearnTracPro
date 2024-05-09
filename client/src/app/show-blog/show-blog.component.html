@@ -1,12 +1,14 @@
-<div>
+<div class="blog-details">
     @if(newBlog){
-        <div>{{newBlog.title}}</div>
-        <div>{{newBlog.content}}</div>
-        <div>{{newBlog.createdAt}}</div>
-        <div>
-            @if(author){
-                <div>{{author.name}}</div>
-            }
-        </div>
+        <h1 class="blog-title">{{newBlog.title}}</h1>
+        <br>
+        <img [src]="newBlog.safeImageUrl" class="center">
+        <br>
+        <!-- <div class="blog-content">{{newBlog.content}}</div> -->
+        @for(paragraph of paragraphs; track paragraph.id){
+            <div class="paragraph">{{paragraph}}</div>
+            <br>
+        }
+        <div class="blog-date">{{newBlog.createdAt}}</div>
     }
 </div>

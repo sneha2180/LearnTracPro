@@ -1,0 +1,16 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* Adjust as needed */
+  }
+  .blog-details{
+    padding:0px 50px;
+  }
+  .blog-title{
+    font-weight: 700;
+  }
+  .paragraph{
+    font-size: medium;
+    line-height: 1.3;
+  }

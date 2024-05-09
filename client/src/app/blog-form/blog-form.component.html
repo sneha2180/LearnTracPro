@@ -1,0 +1,28 @@
+<div class="create-blog">
+  <h1 class="blog-title">Write a Blog</h1>
+  <form [formGroup]="blogForm" (ngSubmit)="onSubmit()" class="blog-form">
+    <input
+      type="text"
+      placeholder="Title"
+      formControlName="title"
+      class="blog-input blog-input-title"
+    />
+    <textarea
+    placeholder="Content"
+    formControlName="content"
+    class="blog-input blog-input-content"
+  ></textarea>
+    <input
+      type="text"
+      placeholder="Thumbnail Image URL"
+      formControlName="image"
+      class="blog-input blog-input-url"
+    />
+    <input
+      type="submit"
+      value="CREATE BLOG"
+      [disabled]="!blogForm.valid"
+      class="blog-button"
+    />
+  </form>
+</div>

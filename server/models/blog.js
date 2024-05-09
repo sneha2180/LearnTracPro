@@ -12,6 +12,7 @@ const blogSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
+  image:String
 });
 
 const Blog = mongoose.model('Blog',blogSchema);

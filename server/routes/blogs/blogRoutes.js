@@ -4,8 +4,8 @@ const Blog = require('../../models/blog');
 
 router.post('/', async (req, res) => {
     try{
-        const {title,content,userId,createdAt,updatedAt} = req.body;
-        const newBlog = await Blog.create({title,content,userId,createdAt,updatedAt});
+        const {title,content,userId,createdAt,updatedAt,image} = req.body;
+        const newBlog = await Blog.create({title,content,userId,createdAt,updatedAt,image});
         res.status(201).json(newBlog);
     }catch(e){
         console.error('Error creating student:', error);

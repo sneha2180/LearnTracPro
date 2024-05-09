@@ -17,6 +17,7 @@ import { StudentAccountComponent } from './student-account/student-account.compo
 import { StudentBlogsComponent } from './student-blogs/student-blogs.component';
 import { ShowCourseComponent } from './show-course/show-course.component';
 import { NavbarStudentComponent } from './navbar-student/navbar-student.component';
+import { NavbarTutorComponent } from './navbar-tutor/navbar-tutor.component';
 
 @Component({
   selector: 'app-root',
@@ -33,7 +34,8 @@ import { NavbarStudentComponent } from './navbar-student/navbar-student.componen
     StudentDiscussionsComponent,
     StudentAccountComponent,
     ShowCourseComponent,
-    NavbarStudentComponent
+    NavbarStudentComponent,
+    NavbarTutorComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -43,19 +45,16 @@ export class AppComponent implements OnInit {
   title = 'dashboard-angular';
   user: any;
   path: string = '';
-
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
       if(this.user){
         this.user = JSON.parse(this.user);
-        console.log(this.user.role);
       } 
       this.router.events
         .pipe(filter((event) => event instanceof NavigationEnd))
         .subscribe(() => {
           const url = new URL(window.location.href);
           this.path = url.pathname;
-          console.log(this.path)
         });
     }
     this.onLogin();
@@ -64,7 +63,6 @@ export class AppComponent implements OnInit {
     const userData = localStorage.getItem('user');
     if (userData !== null) {
       this.user = JSON.parse(userData);
-      console.log(this.user);
     }
   }
 }

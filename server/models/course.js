@@ -8,10 +8,10 @@ const courseSchema = new mongoose.Schema({
     category:String,
     level:String,
     prerequisites:[String],
-    studentsEnrolled:Number,
     chapters: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Chapter' }],
     queries: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Query' }],
-    resources:[String]
+    resources:[String],
+    image: String
 });
 
 const Course = mongoose.model('Course', courseSchema);

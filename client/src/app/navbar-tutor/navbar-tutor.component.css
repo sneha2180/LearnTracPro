@@ -1,0 +1,10 @@
+.nav-container{
+  display: flex;
+  justify-content: space-around;
+  padding:30px 0px;
+  background-color: #FBF9F1;
+}
+.nav-container a{
+  text-decoration: none;
+  color:#1E0342;
+}

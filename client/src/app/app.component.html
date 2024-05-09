@@ -37,7 +37,7 @@
   }
 } -->
 
-@if(this.user==null){
+<!-- @if(this.user==null){
   @if(this.path=='/register'){
       <app-signup></app-signup>
   }@else{
@@ -45,4 +45,17 @@
   }
 }@else{
   <app-navbar-student></app-navbar-student>
+} -->
+@if(this.user){
+  @if(this.user.role=='student'){
+    <app-navbar-student></app-navbar-student>
+  }@else{
+    <app-navbar-tutor></app-navbar-tutor>
+  }
+}@else{
+  @if(this.path=='/signup'){
+    <app-signup></app-signup>
+}@else{
+    <app-signin></app-signin>
+}
 }

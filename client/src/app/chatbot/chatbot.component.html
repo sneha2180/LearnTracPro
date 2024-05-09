@@ -1,0 +1,8 @@
+<div class="create-blog">
+    <h1>ask Soemthing</h1>
+    <form [formGroup]="chatForm" (ngSubmit)="onSubmit()" class="chat-form">
+        <input type="text" placeholder="Content" formControlName="content" class="chat-input"/>
+        <input type="submit" value="ASK" [disabled]="!chatForm.valid" class="chat-button"/>
+    </form>
+
+</div>

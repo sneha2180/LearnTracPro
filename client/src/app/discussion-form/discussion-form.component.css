@@ -1,0 +1,37 @@
+.create-discussion {
+    background-color: #A87676; /* Background color */
+    color: #FFD0D0; /* Font color */
+    padding: 20px; /* Add padding for spacing */
+    font-family: Arial, sans-serif; 
+    height:100vh;/* Specify font family */
+}
+
+.create-discussion h1 {
+    font-size: 24px; /* Increase font size for heading */
+    font-weight: bold; /* Make heading bold */
+    margin-bottom: 20px; /* Add margin below heading for spacing */
+}
+
+.discussion-form {
+    margin-top: 20px; /* Add margin above form for spacing */
+}
+
+.discussion-input {
+    width: 100%; /* Set width to 100% */
+    padding: 5px; /* Add padding to input */
+    margin-bottom: 10px; /* Add margin below input for spacing */
+    border: 1px solid #777; /* Add border to input */
+    border-radius: 5px; /* Apply border radius to input */
+}
+
+.discussion-input:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.discussion-button {
+    width: 100%; /* Set width to 100% */
+    padding: 5px; /* Add padding to button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Apply border radius to button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}

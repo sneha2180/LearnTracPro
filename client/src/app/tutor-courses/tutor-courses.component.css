@@ -1,0 +1,13 @@
+.course-container { 
+    padding: 20px; 
+    font-family: Arial, sans-serif; 
+    height:100vh;
+}
+
+.create-course-button {
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+

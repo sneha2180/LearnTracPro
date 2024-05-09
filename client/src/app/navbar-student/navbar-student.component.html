@@ -1,70 +1,11 @@
-<!-- <div>
-    <a href="/student/home">HOME</a>
-    <a href="/student/about">ABOUT</a>
-    <a href="/student/blogs">BLOGS</a>
-    <a href="/student/courses">COURSES</a>
-    <a href="/student/discussions">OPEN DISCUSSION</a>
-    <a href="/student/account">ACCOUNT</a>
-</div> -->
-
-<div>
+<div class="nav-container">
+  <div><a routerLink="/student/home" routerLinkActive="active" ariaCurrentWhenActive="page">HOME</a></div>
+  <div><a routerLink="/student/about" routerLinkActive="active" ariaCurrentWhenActive="page">ABOUT</a></div>
+  <div><a routerLink="/student/blogs" routerLinkActive="active" ariaCurrentWhenActive="page">BLOGS</a></div>
+  <div><a routerLink="/student/courses" routerLinkActive="active" ariaCurrentWhenActive="page">COURSES</a></div>
   <div>
-    <a
-      routerLink="/student/home"
-      routerLinkActive="active"
-      ariaCurrentWhenActive="page"
-      >HOME</a
-    >
+    <div><a routerLink="/student/discussions" routerLinkActive="active" ariaCurrentWhenActive="page">DISCUSSIONS</a></div>
   </div>
-  <div>
-    <a
-      routerLink="/student/about"
-      routerLinkActive="active"
-      ariaCurrentWhenActive="page"
-      >ABOUT</a
-    >
-  </div>
-  <div>
-    <a
-      routerLink="/student/blogs"
-      routerLinkActive="active"
-      ariaCurrentWhenActive="page"
-      >BLOGS</a
-    >
-  </div>
-  <div>
-    <a
-      routerLink="/student/courses"
-      routerLinkActive="active"
-      ariaCurrentWhenActive="page"
-      >COURSES</a
-    >
-  </div>
-  <div>
-    <a
-      routerLink="/student/blogs"
-      routerLinkActive="active"
-      ariaCurrentWhenActive="page"
-      >BLOGS</a
-    >
-  </div>
-  <div>
-    <div>
-        <a
-          routerLink="/student/discussions"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          >DISCUSSIONS</a
-        >
-      </div>
-  </div>
-  <div>
-    <a
-      routerLink="/student/account"
-      routerLinkActive="active"
-      ariaCurrentWhenActive="page"
-      >ACCOUNT</a
-    >
-  </div>
+  <div><a routerLink="/student/account" routerLinkActive="active" ariaCurrentWhenActive="page">ACCOUNT</a></div>
 </div>
 <router-outlet></router-outlet>

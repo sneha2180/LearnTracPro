@@ -1,0 +1,47 @@
+.blog-container {
+    padding: 20px;
+    width:95vw;
+}
+
+.blog-title {
+    background-color: #fff; /* White background */
+    padding: 10px;
+    margin-bottom: 10px; /* Add margin between blog titles */
+    border-radius: 5px;
+    display: block;
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+}
+
+.blog-link {
+    text-decoration: none;
+    color: #333; /* Link color */
+}
+
+.blog-link:hover .blog-title {
+    background-color: #f0f0f0; /* Lighter background color on hover */
+}
+
+.write-blog-button {
+    display: block;
+    width: 100%; /* Set width to maximum width */
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #CA8787; /* Button color */
+    color: #fff; /* Button text color */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blog-list-item{
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    margin:10px;
+}
+img{
+    width:15vw;
+    height:auto;
+}

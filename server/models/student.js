@@ -7,7 +7,8 @@ const studentSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    password: String
+    password: String,
+    enrolledCourses:[String]
 });
 
 const Student = mongoose.model('Student', studentSchema);

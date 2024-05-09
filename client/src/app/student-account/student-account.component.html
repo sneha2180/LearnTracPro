@@ -1,9 +1,28 @@
-<div>
+<div class="user-account">
     <div>
         @if(user){
-            <div>{{name}}</div>
-            <div>{{email}}</div>
-            <div>{{role}}</div>
+            <div class="user-div">
+                <div>
+                    <div class="user-info">
+                        <div class="info-label">Name:</div>
+                        <div class="info-value">{{name}}</div>
+                    </div>
+                    <div class="user-info">
+                        <div class="info-label">Email:</div>
+                        <div class="info-value">{{email}}</div>
+                    </div>
+                    <div class="user-info">
+                        <div class="info-label">Role:</div>
+                        <div class="info-value">{{role}}</div>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/user.png">
+                </div>
+            </div>
         }
+        <button (click)="handleLogout()">Logout</button>
     </div>
+    <h1>Enrolled Courses</h1>
+    <app-show-enrolled-course-list></app-show-enrolled-course-list>
 </div>

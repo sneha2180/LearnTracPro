@@ -1,9 +1,10 @@
 import { Component,OnInit } from '@angular/core';
+import { ShowEnrolledCourseListComponent } from '../show-enrolled-course-list/show-enrolled-course-list.component';
 
 @Component({
   selector: 'app-student-account',
   standalone: true,
-  imports: [],
+  imports: [ShowEnrolledCourseListComponent],
   templateUrl: './student-account.component.html',
   styleUrl: './student-account.component.css'
 })
@@ -22,5 +23,9 @@ export class StudentAccountComponent implements OnInit{
       this.email = JSON.parse(this.user).email;
       this.role = JSON.parse(this.user).role;
     }
+  }
+  handleLogout(){
+localStorage.removeItem("user");
+
   }
 }

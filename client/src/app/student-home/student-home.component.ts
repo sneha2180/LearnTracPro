@@ -1,33 +1,16 @@
-import { Component,OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
+import { BlogListComponent } from '../blog-list/blog-list.component';
+import { CourseListComponent } from '../course-list/course-list.component';
 import Blog from '../../model/Blog';
-import Course from '../../model/Course';
 
 @Component({
   selector: 'app-student-home',
   standalone: true,
-  imports: [],
+  imports: [BlogListComponent,CourseListComponent],
   templateUrl: './student-home.component.html',
   styleUrl: './student-home.component.css'
 })
-export class StudentHomeComponent implements OnInit{
-  constructor(private router: Router) {}
-    blogs:any;
-    courses:any;
-    ngOnInit(): void {
-       this.getAllBlogs();
-       this.getAllCourses();
-    }
-    async getAllBlogs(){
-      this.blogs = await Blog.getAllBlogs();
-    }
-    async getAllCourses(){
-      this.courses = await Course.getAllCourses();
-    }
-    handleBlogClick(id:string){
-      this.router.navigate([`/student/course/${id}`]);
-    }
-    handleCourseClick(id:string){
-      console.log(id);
-    }
+export class StudentHomeComponent{
+    
 }

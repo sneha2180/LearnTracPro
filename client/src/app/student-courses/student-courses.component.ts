@@ -1,23 +1,14 @@
 import { Component,OnInit } from '@angular/core';
 import Course from '../../model/Course';
+import { CourseListComponent } from '../course-list/course-list.component';
 
 @Component({
   selector: 'app-student-courses',
   standalone: true,
-  imports: [],
+  imports: [CourseListComponent],
   templateUrl: './student-courses.component.html',
   styleUrl: './student-courses.component.css'
 })
-export class StudentCoursesComponent implements OnInit{
-  courses:any;
-  ngOnInit(): void {
-      this.getAllCourses();
-  }
-  async getAllCourses(){
-    this.courses = await Course.getAllCourses();
-    console.log(this.courses);
-  }
-  handleClick(id:string){
-    console.log(id);
-  }
+export class StudentCoursesComponent{
+  
 }

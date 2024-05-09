@@ -50,6 +50,17 @@ export default class Student {
       return {};
     }
   };
+  enrollCourse = async (obj: any): Promise<object> => {
+    try {
+      const apiConnect = await ApiConnect.getInstance();
+      const response = await apiConnect.post('/student/enroll', {}, obj);
+      const data = await response.json();
+        return data;
+    } catch (error) {
+      console.log(error);
+      return {};
+    }
+  };
   async getStudent(id:string){
     try{
       const apiConnect = await ApiConnect.getInstance();

@@ -1,13 +1,27 @@
-<div>
-    <h1>Sign In</h1>
-    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="Email" formControlName="email"/>
-        <input type="text" placeholder="Password" formControlName="password"/>
-        <select formControlName="role">
-            <option value="">Select Role</option>
-            <option value="student">Student</option>
-            <option value="tutor">Tutor</option>
-        </select>
-        <input type="submit" value="SIGN UP" [disabled]="!userForm.valid"/>
-    </form>
+<div class="main">
+    <div class="signup-main">
+        <h1 class="signin-title">Sign In</h1>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="signin-form">
+            <label>Email</label>
+            <br>
+            <input type="text" placeholder="Email" formControlName="email" class="signin-form-input"/>
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="text" placeholder="Password" formControlName="password" class="signin-form-input"/>
+            <br>
+            <label>Role</label>
+            <br>
+            <select formControlName="role" class="signin-form-input">
+                <option value="">Select Role</option>
+                <option value="student">Student</option>
+                <option value="tutor">Tutor</option>
+            </select>
+            <br>
+            <input type="submit" value="SIGN IN" [disabled]="!userForm.valid" class="signin-form-input"/>
+        </form>
+    </div>
+    <div class="signin-img-div">
+        <img src="assets/student.jpg" alt="Description of the image" class="signin-img">
+    </div>
 </div>

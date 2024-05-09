@@ -1,0 +1,16 @@
+<div class="discussion-details">
+    @if(newDiscussion){
+        <div class="discussion-title">{{newDiscussion.title}}</div>
+        <div class="discussion-content">{{newDiscussion.content}}</div>
+        <div class="comments">
+            @for(comment of newDiscussion.comments;track comment._id){
+                <div class="comment">{{comment.content}}</div>
+                <div class="comment-date">{{comment.createdAt}}</div>
+            }
+        </div>
+        <form [formGroup]="commentForm" (ngSubmit)="onSubmit()" class="comment-form">
+            <input type="text" placeholder="Write a comment" formControlName="content" class="comment-input"/>
+            <input type="submit" value="COMMENT" [disabled]="!commentForm.valid" class="comment-button"/>
+        </form>
+    }
+</div>

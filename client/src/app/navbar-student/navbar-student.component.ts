@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink,RouterLinkActive,RouterOutlet ,NavigationEnd,Router} from '@angular/router';
 import { SignupComponent } from '../signup/signup.component';
 
@@ -18,7 +18,6 @@ export class NavbarStudentComponent {
   studentcourses:any;
   studentdiscussions:any;
   studentaccount:any;
-  tutorhome:any;
   path:any;
   constructor(private router: Router) {
     this.router.events.subscribe(event => {

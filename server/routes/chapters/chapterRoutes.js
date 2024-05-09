@@ -6,12 +6,12 @@ const Course = require('../../models/course');
 router.post('/:courseId/chapter', async (req, res) => {
     try {
         const courseId = req.params.courseId;
-        const { title, content } = req.body;
+        const { title, content,video } = req.body;
         const course = await Course.findById(courseId);
         if (!course) {
             return res.status(404).json({ message: 'Course not found' });
         }
-        const newChapter = await Chapter.create({ title, content });
+        const newChapter = await Chapter.create({ title, content,video });
         course.chapters.push(newChapter._id);
         await course.save();
 

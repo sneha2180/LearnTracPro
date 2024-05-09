@@ -1,0 +1,15 @@
+.tutor-page {
+    background-color: #A87676; /* Background color */
+    color: #FFD0D0; /* Font color */
+    padding: 20px; /* Add padding for spacing */
+    font-family: Arial, sans-serif; /* Specify font family */
+}
+
+.tutor-page h1,
+.tutor-page h2 {
+    color: white; /* Heading color */
+}
+
+.tutor-page p {
+    margin-bottom: 20px; /* Add margin below paragraphs for spacing */
+}

@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import Student from '../../model/Student';
+import Tutor from '../../model/Tutor';
 import { Router } from '@angular/router';
 import StudentSession from '../../common/Session';
 
@@ -20,6 +21,7 @@ export class SigninComponent {
   constructor(private router: Router) {}
   obj: any;
   student: any = new Student();
+  tutor:any = new Tutor();
   userForm = new FormGroup({
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
@@ -38,6 +40,15 @@ export class SigninComponent {
         if (data) {
           localStorage.setItem('user', JSON.stringify(user));
           this.router.navigate(['/student/home']);
+        }
+      }
+      if (this.obj.role == 'tutor') {
+        const data = await this.tutor.signin(this.obj);
+        console.log(data);
+        const user = {...data,role:'tutor'};
+        if (data) {
+          localStorage.setItem('user', JSON.stringify(user));
+          this.router.navigate(['/tutor/home']);
         }
       }
     } catch (e) {}

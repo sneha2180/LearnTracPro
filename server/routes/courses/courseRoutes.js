@@ -4,15 +4,14 @@ const Course = require('../../models/course');
 
 router.post('/', async (req, res) => {
     try {
-        const { title, description, instructor, duration, category, level, prerequisites, studentsEnrolled, resources } = req.body;
-        const newCourse = await Course.create({ title, description, instructor, duration, category, level, prerequisites, studentsEnrolled, resources });
+        const { title, description, instructor, duration, category, level, prerequisites, resources,image } = req.body;
+        const newCourse = await Course.create({ title, description, instructor, duration, category, level, prerequisites,  resources,image });
         res.status(201).json(newCourse);
     } catch (error) {
         console.error('Error creating course:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
 });
-
 router.get('/:courseId', async (req, res) => {
     try {
         const courseId = req.params.courseId;
