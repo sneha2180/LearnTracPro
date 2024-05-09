@@ -13,17 +13,9 @@ app.use(express.json());
 const readline =require("readline") ;
 const { Configuration, OpenAIApi } = require('openai');
 const OpenAIChat = require("./common/OpenAIChat");
+require('dotenv').config();
 
-
-const uri =
-  "mongodb+srv://sandraantony2002:3kBDgrGjlSZ1eYMW@learntracpro.mspmwz0.mongodb.net/?retryWrites=true&w=majority&appName=learntracpro";
-
-// const configuration = new Configuration({
-//   organization: "org-2BacFidJ0Ht6Cqio3DywBaFe",
-//   apiKey: "sk-proj-v54uToMIV42FI9NQuMHXT3BlbkFJjmEtosBBVJhFqU6c6SaJ",
-// });
-
-// const openai = new OpenAIApi(configuration);
+const uri = process.env.DB_URL;
 
 mongoose
   .connect(uri, {

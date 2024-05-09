@@ -1,14 +1,16 @@
 const OpenAI = require("openai");
 
+require('dotenv').config();
 class OpenAIChat {
   constructor() {
     this.openai = new OpenAI({
-      apiKey: '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'
+      apiKey: process.env.OPENAI_API_KEY
     });
   }
 
   async generateChatResponse(content) {
     try {
+      console.log(process.env.API_KEY)
       const completion = await this.openai.chat.completions.create({
         messages: [{ role: "user", content }],
         model: "gpt-3.5-turbo",
